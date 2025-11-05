@@ -1,8 +1,27 @@
 <html>
   <head>
-    <title>Testing External Live Agent</title>
+    <title>Survey MIAW External Site</title>
   </head>
   <body>
-    Website Body
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DSG00000beT9F',
+				'SurveyMIAWExternalSiteDeployment',
+				'https://orgfarm-4c36e3115c.test1.my.pc-rnd.site.com/ESWSurveyMIAWExternalSite1762332379597',
+				{
+					scrt2URL: 'https://orgfarm-4c36e3115c.test1.my.pc-rnd.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-4c36e3115c.test1.my.pc-rnd.site.com/ESWSurveyMIAWExternalSite1762332379597/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
   </body>
 </html>
